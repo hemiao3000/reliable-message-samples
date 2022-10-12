@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+    <!-- console-appender -->
+    <include resource="logback/console-appender.xml"/>
+
+    <!-- file-appender -->
+    <include resource="logback/file-appender.xml"/>
+
+    <root level="INFO">
+        <!-- console-appender -->
+        <appender-ref ref="CONSOLE"/>
+        <!-- file-appender -->
+        <appender-ref ref="FILE_ALL"/>
+        <appender-ref ref="FILE_WARN"/>
+        <appender-ref ref="FILE_ERROR"/>
+    </root>
+
+    <!-- 指定类与 <looger> 的关联关系 -->
+    <logger name="com.woniu" level="INFO" additivity="false">
+        <!-- console-appender -->
+        <appender-ref ref="CONSOLE"/>
+        <!-- file-appender -->
+        <appender-ref ref="FILE_ALL"/>
+        <appender-ref ref="FILE_WARN"/>
+        <appender-ref ref="FILE_ERROR"/>
+    </logger>
+
+    <!-- 指定类与 <looger> 的关联关系 -->
+    <logger name="com.example" level="INFO" additivity="false">
+        <!-- console-appender -->
+        <appender-ref ref="CONSOLE"/>
+        <!-- file-appender -->
+        <appender-ref ref="FILE_ALL"/>
+        <appender-ref ref="FILE_WARN"/>
+        <appender-ref ref="FILE_ERROR"/>
+    </logger>
+
+</configuration>

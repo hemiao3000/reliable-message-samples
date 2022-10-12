@@ -1,0 +1,6 @@
+###
+POST http://localhost:8080/order
+Content-Type: application/x-www-form-urlencoded
+
+userId=user202103032042012&commodityCode=100202003032041&count=1&money=200
+
