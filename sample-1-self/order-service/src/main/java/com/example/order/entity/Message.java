@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @TableName("message")
 public class Message implements Serializable {
     public static final Integer SENDING = 0;    // 发送中：消息还未送到 RabbitMQ Server
-    public static final Integer SEND = 1;       // 已成功：消息已经送到了 RabbitMQ Server
+    public static final Integer SEND = 1;       // 已发送：消息已经送到了 RabbitMQ Server（的交换机）
     public static final Integer RECEIVED = 2;   // 已接收：消息已经送到了消费者。
 
     @TableId(type = IdType.AUTO)

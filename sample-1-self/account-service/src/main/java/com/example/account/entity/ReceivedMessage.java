@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @TableName("received_message")
 public class ReceivedMessage implements Serializable {
+
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 

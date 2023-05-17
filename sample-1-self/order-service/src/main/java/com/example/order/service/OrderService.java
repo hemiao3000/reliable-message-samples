@@ -21,9 +21,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class OrderService {
 
-    @Resource
-    private MessageMapper messageMapper;
-
+    private final MessageMapper messageMapper;
     private final OrderMapper orderMapper;
 
     @SneakyThrows

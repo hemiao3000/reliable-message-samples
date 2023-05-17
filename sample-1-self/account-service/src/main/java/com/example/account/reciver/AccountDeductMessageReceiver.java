@@ -54,6 +54,7 @@ public class AccountDeductMessageReceiver {
         accountService.deduct(userId, money);
         log.debug("业务逻辑执行成功");
 
+        // 第 3 步：向订单服务发http请求，告知它成功收到它发过来的 id 为 messageIdStr 消息
         orderServiceClient.receivedMessage(Long.parseLong(messageIdStr));
     }
 }
